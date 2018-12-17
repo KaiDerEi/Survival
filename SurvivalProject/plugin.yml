@@ -4,3 +4,5 @@ main: Main.Main
 
 commands:
    heal:
+   setspawn: 
+   spawn:
