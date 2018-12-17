@@ -8,7 +8,7 @@ import net.md_5.bungee.api.ChatColor;
 
 public class Main extends JavaPlugin {
 	
-	public String prefix = ChatColor.translateAlternateColorCodes('&', Config.cfg.getString("prefix"));;
+	public String prefix;
 	
 	private static Main instance;
 	
@@ -28,9 +28,12 @@ public class Main extends JavaPlugin {
 		instance = this;
 		Config.createConfig();
 		
+		this.prefix = ChatColor.translateAlternateColorCodes('&', Config.cfg.getString("prefix"));
 		Bukkit.broadcastMessage("" + prefix);
 		
 	}
+	
+	
 	
 
 }

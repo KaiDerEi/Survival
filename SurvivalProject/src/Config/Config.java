@@ -5,8 +5,6 @@ import java.io.IOException;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import Main.Main;
-import net.md_5.bungee.api.ChatColor;
 
 public class Config {
 	
