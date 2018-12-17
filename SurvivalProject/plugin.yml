@@ -1,3 +1,6 @@
 name: SurvivalProject
 version: 1.0
 main: Main.Main
+
+commands:
+   heal:
