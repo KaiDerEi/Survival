@@ -1,12 +1,14 @@
 package Main;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import Config.Config;
+import net.md_5.bungee.api.ChatColor;
 
 public class Main extends JavaPlugin {
 	
-	public String prefix;
+	public String prefix = ChatColor.translateAlternateColorCodes('&', Config.cfg.getString("prefix"));;
 	
 	private static Main instance;
 	
@@ -23,9 +25,10 @@ public class Main extends JavaPlugin {
 	
 	public void onEnable()
 	{
-		System.out.println("");
 		instance = this;
 		Config.createConfig();
+		
+		Bukkit.broadcastMessage("" + prefix);
 		
 	}
 	

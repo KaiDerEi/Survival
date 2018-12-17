@@ -10,9 +10,11 @@ import net.md_5.bungee.api.ChatColor;
 
 public class Config {
 	
+	private static File folder = new File("plugins/Survival");
+	
 	private static File file = new File("plugins/Survival/config.yml");
 	
-	private static YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
+	public static YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
 	
 	
 	
@@ -31,9 +33,9 @@ public class Config {
 	
 	public static void createConfig()
 	{
-		if(file.exists())
+		if(!folder.exists())
 		{
-			file.mkdir();
+			folder.mkdir();
 		}
 		
 		if(!file.exists())
@@ -43,19 +45,17 @@ public class Config {
 				
 				cfg.set("prefix", "&aSurvival ");
 				
-				
 				saveConfig();
+
 			}
 			catch (IOException e)
 			{
 				e.printStackTrace();
 			}
 		}
+		saveConfig();
 	}
 	
-	public void translateConfig()
-	{
-		Main.getInstance().prefix = ChatColor.translateAlternateColorCodes('&', cfg.getString("prefix"));
-	}
+
 
 }
