@@ -43,7 +43,7 @@ public class Config {
 			try {
 				file.createNewFile();
 				
-				cfg.set("prefix", "&aSurvival ");
+				cfg.set("prefix", "&aSurvival &8»&r");
 				
 				saveConfig();
 
