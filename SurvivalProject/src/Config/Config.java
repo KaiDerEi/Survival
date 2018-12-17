@@ -31,6 +31,7 @@ public class Config {
 	
 	public static void createConfig()
 	{
+		
 		if(!folder.exists())
 		{
 			folder.mkdir();

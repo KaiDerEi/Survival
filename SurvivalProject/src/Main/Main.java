@@ -26,13 +26,19 @@ public class Main extends JavaPlugin {
 	
 	public void onEnable()
 	{
-		
+		//Instance [Ganz Oben]
 		instance = this;
+		//Instance [Ganz Oben]
+		
+		//Config [Danach]
 		Config.createConfig();
-		
 		this.prefix = ChatColor.translateAlternateColorCodes('&', Config.cfg.getString("prefix"));
+		//Config [Danach]
 		
+		//Commands [Nach Config]
 		getCommand("heal").setExecutor(new heal());
+		//Commands [Nach Config]
+		
 		
 		Bukkit.broadcastMessage("" + prefix);
 		

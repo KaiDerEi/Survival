@@ -21,14 +21,15 @@ public class heal implements CommandExecutor{
 				p.sendMessage("§cYou were healed§7!");
 				
 		
-			}else if(args.length == 0) {
+			}else if(args.length == 1) {
 				Player target = Bukkit.getPlayer(args[0]);
 				if(target != null) {
 					target.setHealth(20);
 					target.setFoodLevel(20);
 					target.sendMessage(Main.getInstance().prefix + "§cYou were healed§7!");
 					if(target == p) {
-						p.sendMessage(Main.getInstance().prefix + "§cYou were healed§7!");
+						
+						
 					}else {
 						target.sendMessage(Main.getInstance().prefix + "§cYou were healed§7!");
 						p.sendMessage(Main.getInstance().prefix + "§cYou healed " + target.getName() + " §7!");
