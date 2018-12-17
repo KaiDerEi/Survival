@@ -37,6 +37,8 @@ public class heal implements CommandExecutor{
 				}else {
 					p.sendMessage(Main.getInstance().prefix + "§cThe player is not online§7!");
 				}
+			}else if(args.length > 1) {
+				p.sendMessage(Main.getInstance().prefix + "§cPlease type §7/§cheal§7!");
 			}
 
 		}
