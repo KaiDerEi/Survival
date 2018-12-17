@@ -6,7 +6,7 @@ public class Main extends JavaPlugin {
 	
 	public void onEnable()
 	{
-		
+		System.out.print("ur mum gay");
 	}
 
 }
